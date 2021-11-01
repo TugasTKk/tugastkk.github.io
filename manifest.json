@@ -1,0 +1,17 @@
+{
+    "name": "Pertamina",
+    "short_name": "Pertamina",
+    "description": "Pertamina",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#F7F7F7",
+    "theme_color": "#F7F7F7",
+    "icons": [
+        {
+            "src": "./assets/img/logo-1.png",
+            "sizes": "208x208",
+            "type": "image/png"
+        }
+    ],
+    "gcm_sender_id": "1020513000173"
+}

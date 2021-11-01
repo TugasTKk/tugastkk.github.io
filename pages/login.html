@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="./assets/css/login.css">
+<div class="row">
+    <div class="col-md-7 image-container d-flex flex-column align-items-center justify-content-center">
+        <img src="assets/img/logo-1.png" alt="logo1">
+        <p class="desc-txt py-3">Pastikan kamu hanya login menggunakan satu akun saja</p>
+    </div>
+    <div class="col-md-5 login-container d-flex flex-column align-items-center justify-content-center">
+      <div class="text-container">
+        <h1>Selamat Datang!</h1>
+        <p>Masukkan email dan password untuk memasuki dashboard</p>
+        <form id="myForm">
+          <div class="form-group">
+            <label for="exampleInputEmail1" class="inputtag">Email</label>
+            <input type="email" class="form-control email-input"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan email">
+            <small id="emailHelp" class="form-text text-muted share">Kami tidak akan menyebarkan alamat email anda</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1" class="inputtag">Password</label>
+            <input type="password" class="form-control password-input" id="exampleInputPassword1" placeholder="Masukkan password">
+          </div>
+          <div class="recovery text-center mb-2">
+            <a href="recoveryPassword.html" class="recoveryPassword">Lupa Password</a>
+          </div>
+          <button type="submit" class="btn btn-login">Login</button>
+          <div class="register-container text-center mt-2">
+            Tidak punya akun? <a class="register" href="register.html">Daftar</a>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>

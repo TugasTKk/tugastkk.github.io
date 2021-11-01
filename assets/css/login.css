@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    font-family: Poppins;
+    overflow: hidden;
+    background: rgb(252, 237, 237) ;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.row{
+    height: 100vh; 
+    /* flex-direction: column;    */
+}
+
+.image-container{
+    font-style: normal;
+    font-weight: normal;
+    background: #F4F8FF;
+}
+
+.desc-txt{
+    width: 90%;
+    height: 72px;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+}
+
+.text-container{
+    width: 90%;
+    padding: 0px 40px;
+}
+
+.text-container h1{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 60px;
+    color: black;
+}
+
+.text-container p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #353535;
+    width: 240px;
+    height: 40px;
+}
+
+.form-control{
+    background: #F4F8FF;
+    border-radius: 5px;
+    width: 80%;
+    height: 43px;
+    border: none;
+}
+
+.email-input{
+    border-left: 8px #45D3D3 solid;
+}
+
+.password-input{
+    border-left: 8px #219EBC solid;   
+}
+
+.inputtag{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: black;
+}
+
+.share{
+    width: 80%;
+}
+
+.recovery{
+    width: 80%;   
+}
+
+.recoveryPassword{
+    color: red;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.btn-login{
+    background: #219EBC;
+    border-radius: 5px;
+    width: 80%;
+    height: 43px;
+    color:white;
+}
+
+.register-container{
+    width: 80%;
+}
+
+.register{
+    color: #219EBC
+}
+
+@media screen and (max-width: 960px) {
+    body{
+        width: 100%;
+    }
+
+    .image-container .desc-txt{
+        font-size: 18px;
+    }
+
+    .text-container h1{
+        font-size: 20px;
+    }
+
+    .form-control{
+        width: 100%;
+        font-size: 12px;
+    }
+    
+    .btn-login{
+        width: 100%;
+    }
+
+    .recovery{
+        width: 100%;   
+    }
+
+    .register-container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .image-container{
+        display: none !important;
+    }
+    .login-container{
+        background: #f8f9fa;
+    }
+    .text-container{
+        background: #F4F8FF;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 15px;
+    }
+    .form-control{
+        background: white;
+    }
+}

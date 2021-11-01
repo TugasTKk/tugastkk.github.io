@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/logoKecil2.png" type="image/gif" sizes="16x16">
+    <title>Pertamina</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            /* height: 100vh; */
+            background: linear-gradient(45deg, #c77ff2, #e8519e);
+            background: -webkit-linear-gradient(45deg, #c77ff2, #e8519e);
+            background: -o-linear-gradient(45deg, #c77ff2, #e8519e);
+            background: -moz-linear-gradient(45deg, #c77ff2, #e8519e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Raleway', sans-serif;
+        }
+        h1{
+            font-weight: 900;
+            margin: 10px;
+        }
+        h3{
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .container{
+            background-color: white;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .mobil{
+            margin-bottom: 10px;
+        }
+        .option{
+            width: 100%;
+            display: flex;
+            /* align-items: center; */
+            justify-content: space-evenly;
+        }
+        input{
+            margin: 8px 5px;
+        }
+        input[type=text]{
+            width: 100%;
+            font-size: 14px;
+            padding: 8px;
+            color: #333333;
+            border-radius: 5px;
+            border: 1px solid rgb(90, 90, 90);
+        }
+        input[type=submit]{
+            width: 100%;
+            font-size: 16px;
+            padding: 8px;
+            color: white;
+            border-radius: 5px;
+            background-color: rgb(56, 56, 56);
+        }
+        input[type=checkbox]{
+            font-size: 16px;
+        }
+        label{
+            font-size: 16px;
+            color: rgb(56, 56, 56);
+            font-weight: 600;
+        }
+        @media only screen and (max-width: 600px) {
+            body{
+                padding: 10px 0px;
+            }
+            .container{
+                width: 90%;
+                padding: 5px;
+            }
+            h1{
+                font-size: 18px;
+            }
+            h3{
+                font-size: 17px;
+            }
+            .option{
+                flex-direction: column;
+            }
+            label{
+                font-size: 16px;
+            }
+        }
+        @media only screen and (min-width: 600px) and (max-width: 767px) {
+            body{
+                padding: 10px 0px;
+            }
+            .container{
+                width: 90%;
+                padding: 5px;
+            }
+            h1{
+                font-size: 18px;
+            }
+            h3{
+                font-size: 17px;
+            }
+            label{
+                font-size: 16px;
+            }
+        }
+        @media only screen and (min-width: 768px) and (max-width: 991px){
+            body{
+                height: 100vh;
+            }
+            .container{
+                width: 80%;
+            }
+        }
+        @media only screen and (min-width: 992px){
+            body{
+                height: 100vh;
+            }
+            .container{
+                width: 70%;
+            }
+            h1{
+                font-size: 18px;
+            }
+            h3{
+                font-size: 17px;
+            }
+            label{
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header1"></h1>
+        <h3>Pilih Mobil</h3>
+        <div class="mobil">
+            <input type="checkbox" id="reason1" name="mobil1" class="mobil" value="1"><label for="reason1"> 1. Mobil 1</label>
+            <input type="checkbox" id="reason2" name="mobil2" class="mobil" value="2"><label for="reason2"> 2. Mobil 2</label><br>
+        </div>
+        <h3>Pilih Opsi</h3>
+        <form id="reasonForm" name="reasonForm">
+            <div class="option">
+                <div class="left">
+                    <input class="reason" type="checkbox" id="reason1" name="reason1" value="Interlock Hose Reel Front"><label for="reason1"> 1. Interlock Hose Reel Front</label><br>
+                    <input class="reason" type="checkbox" id="reason2" name="reason2" value="Interlock Hose Reel Rear"><label for="reason2"> 2. Interlock Hose Reel Rear</label><br>
+                    <input class="reason" type="checkbox" id="reason3" name="reason3" value="Interlock Input Coupler Stow"><label for="reason3"> 3. Interlock Input Coupler Stow</label><br>
+                    <input class="reason" type="checkbox" id="reason4" name="reason4" value="Interlock Input Hose Boom Stow"><label for="reason4"> 4. Interlock Input Hose Boom Stow</label><br>
+                    <input class="reason" type="checkbox" id="reason5" name="reason5" value="Interlock Platform Stow"><label for="reason5"> 5. Interlock Platform Stow</label><br>
+                    <input class="reason" type="checkbox" id="reason6" name="reason6" value="Interlock Platform Nozzle Left"><label for="reason6"> 6. Interlock Platform Nozzle Left</label><br>
+                    <input class="reason" type="checkbox" id="reason7" name="reason7" value="Interlock Platform Nozzle Right"><label for="reason7"> 7. Interlock Platform Nozzle Right</label><br>
+                    <input class="reason" type="checkbox" id="reason8" name="reason8" value="Interlock Boom Stow"><label for="reason8"> 8. Interlock Boom Stow</label><br>
+                </div>
+                <div class="right">
+                    <input class="reason" type="checkbox" id="reason9" name="reason9" value="Interlock Bonding Static Reel Front"><label for="reason3"> 9. Interlock Bonding Static Reel Front</label><br>
+                    <input class="reason" type="checkbox" id="reason10" name="reason10" value="Interlock Bonding Static Reel Rear"><label for="reason1"> 10. Interlock Bonding Static Reel Rear</label><br>
+                    <input class="reason" type="checkbox" id="reason11" name="reason11" value="Interlock Bottom Loading"><label for="reason2"> 11. Interlock Bottom Loading</label><br>
+                    <input class="reason" type="checkbox" id="reason12" name="reason12" value="Interlock Handrail"><label for="reason3"> 12. Interlock Handrail</label><br>
+                    <input class="reason" type="checkbox" id="reason13" name="reason13" value="PTO"><label for="reason3"> 13. PTO</label><br>
+                    <input class="reason" type="checkbox" id="reason14" name="reason14" value="Preventice Maintanance"><label for="reason3"> 14. Preventice Maintanance</label><br>
+                    <input class="reason" type="checkbox" id="reason15" name="reason15" value="Interlock System Fault"><label for="reason3"> 15. Interlock System Fault</label><br>
+                </div>
+            </div>
+            <input type="text" placeholder="Masukkan alasan lain" name="lain-lain" class="other">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <script>
+        function getUserID(){
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            myHeaders.append("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiMSIsImVtYWlsIjoiaWFuMjV5b2xhQGdtYWlsLmNvbSJ9.1S0CNrxGrSJVPFY26UPpBPzfwXMlke3pKKPldUio8Nw");
+
+
+            var requestOptions = {
+            method: 'GET',
+            headers: myHeaders,
+            redirect: 'follow'
+            };
+
+            fetch("http://localhost:8080/me", requestOptions)
+            .then(response => response.json())
+            .then(result => localStorage.setItem("id_user", result.id))
+            .catch(error => console.log('error', error));
+
+        }
+
+        getUserID();
+        const thisForm = document.getElementById("reasonForm");
+            thisForm.addEventListener("submit", function(e){
+                e.preventDefault();
+                let checkedValue = null; 
+                let checkedMobil = null; 
+                let inputElements = document.getElementsByClassName('reason');
+                let inputElementsMobil = document.getElementsByClassName('mobil');
+                let parameter;
+                let parameterMobil;
+                for(let i=0; inputElementsMobil[i]; ++i){
+                    if(inputElementsMobil[i].checked){
+                        checkedMobil = inputElementsMobil[i].value;
+                        parameterMobil = i;
+                        // console.log(checkedMobil);
+                        break;
+                    }
+                }
+                for(let i=0; inputElements[i]; ++i){
+                    if(inputElements[i].checked){
+                        checkedValue = inputElements[i].value;
+                        parameter = i+1;
+                        break;
+                    }
+                }
+                // console.log(parameterMobil, checkedValue, parameter);
+                let other = document.querySelector('.other');
+                if(checkedValue == null){
+                    if(other.value == ""){
+                        alert("Pilih salah satu alasan!");
+                    }else{
+                        checkedValue = other.value;
+                        parameter = 16;
+                    }
+                }else if(checkedMobil == null){
+                    alert("Pilih salah satu mobil!");
+                }
+
+                function SendUpdate(parameterMobil, checkedValue, parameter, id){
+                    let myHeaders = new Headers();
+                    myHeaders.append("Content-Type", "application/json");
+                    myHeaders.append("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiMSIsImVtYWlsIjoiaWFuMjV5b2xhQGdtYWlsLmNvbSJ9.1S0CNrxGrSJVPFY26UPpBPzfwXMlke3pKKPldUio8Nw");
+
+                    let raw = JSON.stringify({
+                        "parameterMobil": parameterMobil,
+                        "checkedValue": checkedValue,
+                        "parameter": parameter,
+                        "id": id
+                    });
+
+                    let requestOptions = {
+                        method: 'PUT',
+                        headers: myHeaders,
+                        body: raw,
+                        redirect: 'follow'
+                    };
+
+                    fetch("http://localhost:8080/datamobil", requestOptions)
+                    .then(response => response.text())
+                    .then(result => console.log(result))
+                    .catch(error => console.log('error', error));
+                }
+
+                if(checkedMobil != null && checkedValue != null){
+                    const id = localStorage.getItem("id_user")
+                    SendUpdate(parameterMobil, checkedValue, parameter, id);
+                    console.log(parameterMobil, checkedValue, parameter);
+
+                } 
+                // if(checkedValue == null || checkedMobil == null){
+                //     if(other.value == "" || checkedValue== "" || checkedValue == null || checkedMobil == null){
+                //         alert("Pilih salah satu alasan!");
+                //     }
+                // }else{
+                //     checkedValue = other.value;
+                //     parameter = 16;
+                //     console.log(checkedMobil, parameterMobil, checkedValue, parameter);
+                // }
+                // let password = document.querySelector(".password-input").value;
+                // let email = document.querySelector(".email-input").value;
+                // api.login(email, password);
+        });
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const header1 = urlParams.get('body')
+        document.querySelector('.header1').innerText = header1;
+    </script>
+</body>
+</html>
