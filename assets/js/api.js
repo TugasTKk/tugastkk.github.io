@@ -1,6 +1,6 @@
 import * as charts from "../js/chart.js";
 
-export const base_apiURL = "http://localhost:8080";
+export const base_apiURL = "https://ianfelix.my.id/pertamina/public/";
 
 export function status(response) {
     if (response.status !== 200) {
@@ -16,11 +16,12 @@ export function json(response) {
 }
 export function error(error) {
     console.log("Error : " + error);
-    window.location.replace("http://127.0.0.1:8887/Front/index.html")
+    window.location.replace("/index.html")
     // location.reload()
 }
 
 export const fetchAPI = url => {
+    console.log(url);
     return fetch(url, {
         headers: {
             'Authorization': `Bearer ${localStorage.getItem("token")}`
@@ -142,7 +143,7 @@ export function login(email, password){
     .then(result => {
         if(result.status == 200){
                 localStorage.setItem("token", result.messages.token)
-                window.location.replace("http://127.0.0.1:5501/Front/index.html#dashboard")
+                window.location.replace("/index.html#dashboard")
                 location.reload()
             } 
     })

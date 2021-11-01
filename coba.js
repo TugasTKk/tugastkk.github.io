@@ -15,7 +15,7 @@ webPush.setVapidDetails(
 
 let config = {
   method: 'get',
-  url: 'http://localhost/pertamina/public/subscription',
+  url: 'https://ianfelix.my.id/pertamina/public//subscription',
   headers: { 
     'Content-Type': 'application/json', 
     'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiMSIsImVtYWlsIjoiaWFuMjV5b2xhQGdtYWlsLmNvbSJ9.1S0CNrxGrSJVPFY26UPpBPzfwXMlke3pKKPldUio8Nw'

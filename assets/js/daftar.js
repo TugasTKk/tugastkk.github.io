@@ -60,3 +60,38 @@ function urlBase64ToUint8Array(base64String) {
     }
     return outputArray;
 }
+
+function startPattern(){
+    navigator.vibrate([200,100,200,100,200,100,200]);
+    let sound = new Audio('sound.mp3');
+    sound.play();
+}
+
+function deleteAllNotif(){
+    navigator.serviceWorker.ready.then(function(registration){
+        registration.getNotifications().then(function(notifications){
+            for(let i=0; i< notifications.length; i+=1){
+                notifications[i].close();
+            }
+        })
+    })
+}
+
+function cekNotification(){
+    navigator.serviceWorker.ready.then(function(registration){
+        registration.getNotifications().then(function(notifications){
+            // console.log(notifications);
+            if(notifications.length > 0){
+                if(notifications[notifications.length-1].title == "Notifikasi Mobil"){
+                    startPattern();
+                }
+            }
+        })
+    })
+}
+
+deleteAllNotif();
+
+setInterval(function(){
+    cekNotification();
+}, 1200);

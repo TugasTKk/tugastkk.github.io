@@ -181,7 +181,7 @@
         function getUserID(){
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
-            myHeaders.append("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiMSIsImVtYWlsIjoiaWFuMjV5b2xhQGdtYWlsLmNvbSJ9.1S0CNrxGrSJVPFY26UPpBPzfwXMlke3pKKPldUio8Nw");
+            myHeaders.append("Authorization", `Bearer ${localStorage.getItem("token")}`);
 
 
             var requestOptions = {
@@ -190,7 +190,7 @@
             redirect: 'follow'
             };
 
-            fetch("http://localhost:8080/me", requestOptions)
+            fetch("https://ianfelix.my.id/pertamina/public/me", requestOptions)
             .then(response => response.json())
             .then(result => localStorage.setItem("id_user", result.id))
             .catch(error => console.log('error', error));
@@ -238,13 +238,13 @@
                 function SendUpdate(parameterMobil, checkedValue, parameter, id){
                     let myHeaders = new Headers();
                     myHeaders.append("Content-Type", "application/json");
-                    myHeaders.append("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiMSIsImVtYWlsIjoiaWFuMjV5b2xhQGdtYWlsLmNvbSJ9.1S0CNrxGrSJVPFY26UPpBPzfwXMlke3pKKPldUio8Nw");
+                    myHeaders.append("Authorization", `Bearer ${localStorage.getItem("token")}`);
 
                     let raw = JSON.stringify({
                         "parameterMobil": parameterMobil,
                         "checkedValue": checkedValue,
                         "parameter": parameter,
-                        "id": id
+                        "id": id,
                     });
 
                     let requestOptions = {
@@ -254,17 +254,27 @@
                         redirect: 'follow'
                     };
 
-                    fetch("http://localhost:8080/datamobil", requestOptions)
+                    fetch("https://ianfelix.my.id/pertamina/public/datamobil", requestOptions)
                     .then(response => response.text())
-                    .then(result => console.log(result))
-                    .catch(error => console.log('error', error));
+                    .then(result => {
+                        console.log(result);
+                        if(result != ""){ 
+                            alert("gagal, silahkan coba lagi")
+                        }else{
+                            window.location.href = "/index.html";
+                            alert("Berhasil");
+                        }
+                    })
+                    .catch(error => {
+                        alert("gagal, silahkan ulangi kembali");
+                        console.log('error', error);
+                    });
                 }
 
                 if(checkedMobil != null && checkedValue != null){
                     const id = localStorage.getItem("id_user")
                     SendUpdate(parameterMobil, checkedValue, parameter, id);
-                    console.log(parameterMobil, checkedValue, parameter);
-
+                    // console.log(parameterMobil, checkedValue, parameter);
                 } 
                 // if(checkedValue == null || checkedMobil == null){
                 //     if(other.value == "" || checkedValue== "" || checkedValue == null || checkedMobil == null){
