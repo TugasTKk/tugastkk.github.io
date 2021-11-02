@@ -1,10 +1,12 @@
 var axios = require('axios');
 var webPush = require('web-push');
- 
+const args = process.argv;
 const vapidKeys = {
    "publicKey": "BBQCgsfhPdtihL2Niymr3dbZS8yV6C6bbtjIkXGhShiT3TfTaap7VcQAgLw-kWrazDCFwJ2gVBtOcVgO9YPL0fQ",
    "privateKey": "_6NceOTEVYCgYJID-1j1s8S9C5ijQKLvszSfa9IuHOM"
 };
+
+const command = args.splice(2).join(" ");
  
  
 webPush.setVapidDetails(
@@ -30,7 +32,7 @@ function sendPushNotification(endpoint, p256dh, auth){
             "auth": auth
         }
     };
-    var payload = 'Mobil 1 : BM 1305 CE';
+    var payload = command;
     var options = {
         gcmAPIKey: '1020513000173',
         TTL: 60

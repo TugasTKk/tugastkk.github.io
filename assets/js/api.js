@@ -111,6 +111,10 @@ export function showData(data){
     $(document).ready(function() {
         $('#dataTable').DataTable();
     });
+    document.querySelector(".download").addEventListener("click", function(){
+        let table2excel = new Table2Excel();
+        table2excel.export(document.querySelector(".table"))
+    })
     // document.getElementById("dataTableMobil").innerHTML += mobilPertamina;
 
 }
