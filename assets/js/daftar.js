@@ -63,7 +63,7 @@ function urlBase64ToUint8Array(base64String) {
 
 function startPattern(){
     navigator.vibrate([200,100,200,100,200,100,200]);
-    let sound = new Audio('sound.mp3');
+    let sound = new Audio('sound1.wav');
     sound.play();
 }
 
