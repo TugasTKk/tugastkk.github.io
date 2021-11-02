@@ -112,7 +112,9 @@ self.addEventListener('push', function(event) {
     ]
   };
   event.waitUntil(
-    self.registration.showNotification('Notifikasi Mobil', options)
+    self.registration.showNotification('Notifikasi Mobil', options).then(function(){
+      clients.openWindow("/index.html")
+    })
   );
 });
 
