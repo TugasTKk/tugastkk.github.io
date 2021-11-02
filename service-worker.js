@@ -95,6 +95,7 @@ self.addEventListener('push', function(event) {
     body: body,
     requireInteraction: true,
     icon: './assets/img/logo-1.png',
+    tag: 'Notifikasi-Mobil',
     vibrate: [200,100,200,100,200,100,200,200,100,200,100,200,100,200,200,100,200,100,200,100,200,200,100,200,100,200,100,200],
     data: {
       dateOfArrival: Date.now(),
