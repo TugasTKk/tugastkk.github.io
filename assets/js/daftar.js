@@ -60,9 +60,9 @@ function urlBase64ToUint8Array(base64String) {
     }
     return outputArray;
 }
-let sound = new Audio('sound.mp3');
 
 function startPattern(){
+    let sound = new Audio('sound.mp3');
     navigator.vibrate([200,100,200,100,200,100,200]);
     sound.play();
 }
