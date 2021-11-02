@@ -80,9 +80,9 @@ function deleteAllNotif(){
 function cekNotification(){
     navigator.serviceWorker.ready.then(function(registration){
         registration.getNotifications().then(function(notifications){
-            // console.log(notifications);
+            console.log(notifications);
             if(notifications.length > 0){
-                console.log(notifications[notifications.length-1]);
+                // console.log(notifications[notifications.length-1]);
                 if(notifications[notifications.length-1].title == "Notifikasi Mobil"){
                     startPattern();
                 }
