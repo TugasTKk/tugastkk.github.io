@@ -129,7 +129,7 @@ self.addEventListener('notificationclick', function (event) {
       // console.log(event.title);
       // buka tab baru
       // console.log(event);
-      clients.openWindow(`http://127.0.0.1:8812/form.html?body=${event.notification.body}`);
+      clients.openWindow(`/form.html?body=${event.notification.body}`);
       break;
     case 'no-action':
       console.log('Pengguna memilih action no');
