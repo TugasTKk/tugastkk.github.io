@@ -178,6 +178,14 @@
         </form>
     </div>
     <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const header1 = urlParams.get('body')
+        document.querySelector('.header1').innerText = header1;
+        getUserID();
+        let checkedMobil = header1.split(" ")[1]; 
+        // console.log(checkedMobil);
+
         function getUserID(){
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
@@ -197,24 +205,22 @@
 
         }
 
-        getUserID();
         const thisForm = document.getElementById("reasonForm");
             thisForm.addEventListener("submit", function(e){
                 e.preventDefault();
                 let checkedValue = null; 
-                let checkedMobil = null; 
                 let inputElements = document.getElementsByClassName('reason');
                 let inputElementsMobil = document.getElementsByClassName('mobil');
                 let parameter;
                 let parameterMobil;
-                for(let i=0; inputElementsMobil[i]; ++i){
-                    if(inputElementsMobil[i].checked){
-                        checkedMobil = inputElementsMobil[i].value;
-                        parameterMobil = i;
-                        // console.log(checkedMobil);
-                        break;
-                    }
-                }
+                // for(let i=0; inputElementsMobil[i]; ++i){
+                //     if(inputElementsMobil[i].checked){
+                //         checkedMobil = inputElementsMobil[i].value;
+                //         parameterMobil = i;
+                //         // console.log(checkedMobil);
+                //         break;
+                //     }
+                // }
                 for(let i=0; inputElements[i]; ++i){
                     if(inputElements[i].checked){
                         checkedValue = inputElements[i].value;
@@ -232,7 +238,7 @@
                         parameter = 16;
                     }
                 }else if(checkedMobil == null){
-                    alert("Pilih salah satu mobil!");
+                    alert("Format Pemberitahuan salah!");
                 }
 
                 function SendUpdate(parameterMobil, checkedValue, parameter, id){
@@ -289,10 +295,6 @@
                 // let email = document.querySelector(".email-input").value;
                 // api.login(email, password);
         });
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        const header1 = urlParams.get('body')
-        document.querySelector('.header1').innerText = header1;
     </script>
 </body>
 </html>
