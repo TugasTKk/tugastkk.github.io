@@ -183,7 +183,7 @@
         const header1 = urlParams.get('body')
         document.querySelector('.header1').innerText = header1;
         getUserID();
-        let checkedMobil = header1.split(" ")[1]; 
+        let parameterMobil = header1.split(" ")[1]; 
         // console.log(checkedMobil);
 
         function getUserID(){
@@ -212,7 +212,7 @@
                 let inputElements = document.getElementsByClassName('reason');
                 let inputElementsMobil = document.getElementsByClassName('mobil');
                 let parameter;
-                let parameterMobil;
+                // let parameterMobil;
                 // for(let i=0; inputElementsMobil[i]; ++i){
                 //     if(inputElementsMobil[i].checked){
                 //         checkedMobil = inputElementsMobil[i].value;
@@ -221,6 +221,8 @@
                 //         break;
                 //     }
                 // }
+                let checkedMobil = header1;
+                console.log(checkedMobil);
                 for(let i=0; inputElements[i]; ++i){
                     if(inputElements[i].checked){
                         checkedValue = inputElements[i].value;
@@ -280,7 +282,7 @@
                 if(checkedMobil != null && checkedValue != null){
                     const id = localStorage.getItem("id_user")
                     SendUpdate(parameterMobil, checkedValue, parameter, id);
-                    // console.log(parameterMobil, checkedValue, parameter);
+                    console.log(parameterMobil, checkedValue, parameter);
                 } 
                 // if(checkedValue == null || checkedMobil == null){
                 //     if(other.value == "" || checkedValue== "" || checkedValue == null || checkedMobil == null){
