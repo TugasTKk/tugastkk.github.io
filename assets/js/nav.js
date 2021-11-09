@@ -105,6 +105,8 @@ document.addEventListener("DOMContentLoaded", function() {
                         // });
                     }else if(page == "charts"){
                         // console.log("iniCharts")
+
+                        showSidebar();
                         api.getReasonChart()
                         // console.log("iniSetelahApi")
 
