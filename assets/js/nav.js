@@ -1,5 +1,11 @@
 import * as api from "../js/api.js";
 document.addEventListener("DOMContentLoaded", function() {
+    function hideSidebar(){
+        document.querySelector(".navbar").style.display = "none";
+        document.querySelector(".components-nav").style.display = "none";
+        document.querySelector("footer").style.display = "none";
+    }
+    hideSidebar();
     loadNav();
     function loadNav() {
       var xhttp = new XMLHttpRequest();
@@ -25,12 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
       };
       xhttp.open("GET", "nav.html", true);
       xhttp.send();
-    }
-
-    function hideSidebar(){
-        document.querySelector(".navbar").style.display = "none";
-        document.querySelector(".components-nav").style.display = "none";
-        document.querySelector("footer").style.display = "none";
     }
 
     function showSidebar(){
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             api.login(email, password);
                         });
                     }else if(page=="dashboard" || page=="mobil1" || page=="mobil2"){
-                        // showSidebar();
+                        showSidebar();
                         // location.reload()
                         // $(document).ready(function() {
                         //     $('#dataTable').DataTable();
@@ -140,7 +140,7 @@ const logout = document.querySelector(".logout-btn")
 
 logout.addEventListener('click', function(e){
     localStorage.removeItem("token");
-    window.location.replace("http://127.0.0.1:5501/Front/index.html")
+    window.location.replace("/Front/index.html")
 })
 
 // function logout(){
