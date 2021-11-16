@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 page = event.target.getAttribute("href");
                 console.log(`Ini page ${page}`)
                 loadPage(page);
-                window.location.reload();
+                // window.location.reload();
             });
           });
         }
