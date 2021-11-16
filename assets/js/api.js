@@ -102,6 +102,7 @@ export function showData(data){
             <td>${mobil.time_off}</td>
             <td>${mobil.nama}</td>
             <td>${mobil.personDismiss}</td>
+            <td>${mobil.reason}</td>
             <td>${mobil.reason_detail}</td>
         </tr>
         `
@@ -124,7 +125,7 @@ export function login(email, password){
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
-    "email": email,
+    "username": email,
     "password": password
     });
 

@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelector(".components-nav").style.display = "none";
         document.querySelector("footer").style.display = "none";
     }
-    hideSidebar();
+    // hideSidebar();
     loadNav();
     function loadNav() {
       var xhttp = new XMLHttpRequest();
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             api.login(email, password);
                         });
                     }else if(page=="dashboard" || page=="mobil1" || page=="mobil2"){
-                        showSidebar();
+                        // showSidebar();
                         // location.reload()
                         // $(document).ready(function() {
                         //     $('#dataTable').DataTable();
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     }else if(page == "charts"){
                         // console.log("iniCharts")
 
-                        showSidebar();
+                        // showSidebar();
                         api.getReasonChart()
                         // console.log("iniSetelahApi")
 
