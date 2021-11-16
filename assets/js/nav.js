@@ -19,11 +19,15 @@ document.addEventListener("DOMContentLoaded", function() {
           });
         //   hideSidebar();
 
-          document.querySelectorAll(".components-nav a").forEach(function(elm) {
+          document.querySelectorAll(".components-nav .nav-item").forEach(function(elm) {
             elm.addEventListener("click", function(event) {
                 // Muat konten halaman yang dipanggil
-                page = event.target.getAttribute("href");
-                console.log(`Ini page ${page}`)
+                // console.log(event.target.getAttribute('href'))
+                // location = window.location.href;
+                // console.log(location.href.split('#'));
+                page = event.target.getAttribute('href').substr(1);
+                // console.log(page);
+                // console.log(`Ini page ${page}`)
                 loadPage(page);
                 // window.location.reload();
             });
