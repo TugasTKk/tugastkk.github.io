@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
           document.querySelectorAll(".components-nav a").forEach(function(elm) {
             elm.addEventListener("click", function(event) {
                 // Muat konten halaman yang dipanggil
-                page = event.target.getAttribute("href").substr(1);
+                page = event.target.getAttribute("href");
                 console.log(`Ini page ${page}`)
                 loadPage(page);
                 window.location.reload();
