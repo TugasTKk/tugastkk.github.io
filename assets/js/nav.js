@@ -21,15 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
           document.querySelectorAll(".components-nav .nav-item").forEach(function(elm) {
             elm.addEventListener("click", function(event) {
-                // Muat konten halaman yang dipanggil
-                // console.log(event.target.getAttribute('href'))
-                // location = window.location.href;
-                // console.log(location.href.split('#'));
                 page = event.target.getAttribute('href').substr(1);
-                // console.log(page);
-                // console.log(`Ini page ${page}`)
                 loadPage(page);
-                // window.location.reload();
             });
           });
         }

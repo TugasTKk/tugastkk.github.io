@@ -16,7 +16,7 @@ export function json(response) {
 }
 export function error(error) {
     console.log("Error : " + error);
-    window.location.replace("/index.html")
+    // window.location.replace("/index.html")
     // location.reload()
 }
 
